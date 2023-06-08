@@ -41,12 +41,12 @@ public partial class UpApi
 
         if (since != null)
         {
-            queryParams.Add("filter[since]", JsonSerializer.Serialize(since.Value));
+            queryParams.Add("filter[since]", since.Value.ToRfc3339String());
         }
 
         if (until != null)
         {
-            queryParams.Add("filter[until]", JsonSerializer.Serialize(until.Value));
+            queryParams.Add("filter[until]", until.Value.ToRfc3339String());
         }
 
         if (category != null)
@@ -81,12 +81,12 @@ public partial class UpApi
 
         if (since != null)
         {
-            queryParams.Add("filter[since]", JsonSerializer.Serialize(since.Value));
+            queryParams.Add("filter[since]", since.Value.ToRfc3339String());
         }
 
         if (until != null)
         {
-            queryParams.Add("filter[until]", JsonSerializer.Serialize(until.Value));
+            queryParams.Add("filter[until]", until.Value.ToRfc3339String());
         }
 
         if (category != null)
